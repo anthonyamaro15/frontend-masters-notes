@@ -1,0 +1,21 @@
+body {
+   /*
+        everything on the browser is position static by default
+    */
+   position: static;
+}
+
+/* 
+Advantages ??? research this
+
+Can mix units when performing calculations ( not posibble in Sass ) | says on the instructor notes
+
+{
+    width: 90%; // fallback if needed
+    width: calc(100% - 3em);
+}
+*/
+
+/* 
+Check for :root property if you can define global variables with sass
+*/
