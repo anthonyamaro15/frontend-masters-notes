@@ -1,0 +1,34 @@
+button {
+   // button has a disabled property as well!!
+   &:disabled {
+      opacity: 0.5;
+   }
+}
+
+// Mixins with - Null values
+
+// SASS
+@mixin foo($opacity: null) {
+   color: white;
+   opacity: $opacity;
+}
+
+button {
+   @include foo();
+}
+
+.other-button {
+   @include foo(0.5);
+}
+
+// CSS result
+// when you pass null value on a mixin it will ignore it and not add it at all
+button {
+   color: white;
+}
+
+// this is the second example on line 20 but here we do pass a opacity value to foo mixin
+.other-button {
+   color: white;
+   opacity: 0.5;
+}
